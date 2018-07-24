@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "jquery.html" . }}
+        {{ partial "bootstrap.html" . }}
+        {{ partial "fontawesome.html" . }}
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 text-center">
+                    {{ with .Site.GetPage "/mirror" }}
+                    <a href="{{ .URL }}">
+                        <h2>{{ .Title }}</h2>
+                        <span class="fa-stack fa-5x">
+                            <i class="far fa-square fa-stack-2x"></i>
+                            <i class="fas fa-user fa-stack-1x"></i>                        
+                        </span>
+                    </a>
+                    {{ end }}
+                </div>
+                <div class="col-sm-12 col-md-4 text-center">
+                    {{ with .Site.GetPage "/clock" }}
+                    <a href="{{ .URL }}">
+                        <h2>{{ .Title }}</h2>
+                        <span class="fa-stack fa-5x">
+                            <i class="far fa-rectangle-landscape fa-stack-2x"></i>
+                            <i class="far fa-clock fa-stack-1x"></i>                        
+                        </span>
+                    </a>
+                    {{ end }}
+                </div>
+                <div class="col-sm-12 col-md-4 text-center">
+                    {{ with .Site.GetPage "/panel" }}
+                    <a href="{{ .URL }}">
+                        <h2>{{ .Title }}</h2>
+                        <span class="fa-stack fa-5x">
+                            <i class="far fa-rectangle-landscape fa-stack-2x"></i>
+                            <i class="far fa-grip-horizontal fa-stack-1x"></i>                        
+                        </span>
+                    </a>
+                    {{ end }}
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>

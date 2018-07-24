@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "jquery.html" . }}
+        {{ partial "bootstrap.html" . }}
+        {{ partial "fontawesome.html" . }}
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                {{ range .Pages }}
+                <div class="col-sm-2 col-12 text-center">
+                    <a href="{{ .URL }}">
+                        <i class="far fa-{{ .Description }} fa-4x"></i>
+                        <br/>
+                        {{ .Title }}
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </body>
+</html>

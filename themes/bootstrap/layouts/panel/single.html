@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "jquery.html" . }}
+        {{ partial "bootstrap.html" . }}
+        {{ partial "fontawesome.html" . }}
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <div style="width:90%;height:10vh;z-index:1;position:absolute;left:0px;top:0vh;">
+            <h1>
+                <i class="fal fa-{{ .Description }}"></i> 
+                <small>{{ .Title }}</small>
+            </h1>
+        </div>
+        <div style="width:80%;height:80vh;z-index:1;position:absolute;left:10%;top:10vh;">
+            <div style="display:flex;width:100%;height:100%">
+                <div style="margin:auto">
+                {{ .Content }}
+                </div>
+            </div>
+        </div>
+        <div style="width:100%;height:10vh;z-index:1;position:absolute;left:90%;top:0vh;">
+            <a href="../">
+                <i class="fal fa-times-circle fa-3x"></i>
+            </a>
+        </div>            
+        <div style="width:100%;height:80vh;z-index:0;position:absolute;left:0px;top:10vh;">
+            <div style="display:flex;width:100%;height:100%">
+                <div style="margin:auto">            
+                    <i class="fal fa-{{ .Description }} fa-10x" style="color:darkslategrey"></i>
+                </div>
+            </div>                    
+        </div>
+    </body>
+</html>

@@ -3,3 +3,17 @@ baseURL = "http://example.org/"
 languageCode = "en-ca"
 title = "Smart Interfaces"
 MetaDataFormat = "toml"
+DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+copyright = "Scott D Hodgson"
+[languages]
+  [languages.en]
+    title = "Smart Interfaces"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 1
+  [languages.fr]
+    title = "Interfaces intelligentes"
+    languageName = "Français"
+    contentDir = "content/fr"    
+    weight = 2

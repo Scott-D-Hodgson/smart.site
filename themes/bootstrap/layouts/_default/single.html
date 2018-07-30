@@ -5,7 +5,9 @@
         {{ partial "bootstrap.html" . }}
     </head>
     <body>
+        Default single
         <div class="container-fluid">
+            {{ partial "i18n.html" . }}
             <h1>{{ .Title }}</h1>
             {{ .Content }}
         </div>

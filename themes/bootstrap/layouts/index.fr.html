@@ -10,7 +10,7 @@
         <div class="container">
             {{ partial "i18n.html" . }}
             <div class="row">
-                {{ with .Site.GetPage "/mirror" }}                
+                {{ with .Site.GetPage "/miroir" }}                
                 <div class="col-sm-12 col-md-4 text-center">
                     <a href="{{ .URL }}">
                         <h2>{{ .Title }}</h2>
@@ -21,7 +21,7 @@
                     </a>
                 </div>
                 {{ end }}
-                {{ with .Site.GetPage "/clock" }}                
+                {{ with .Site.GetPage "/horloge" }}                
                 <div class="col-sm-12 col-md-4 text-center">
                     <a href="{{ .URL }}">
                         <h2>{{ .Title }}</h2>
@@ -32,7 +32,7 @@
                     </a>
                 </div>
                 {{ end }}
-                {{ with .Site.GetPage "/panel" }}
+                {{ with .Site.GetPage "/panneau" }}
                 <div class="col-sm-12 col-md-4 text-center">
                     <a href="{{ .URL }}">
                         <h2>{{ .Title }}</h2>

@@ -6,9 +6,8 @@
     </head>
     <body>
         <div class="container-fluid">
+            {{ partial "i18n.html" . }}
             <h1>{{ .Title }}</h1>
-        </div>
-        <div class="container-fluid">
             <div class="card-columns">
                 {{ range .Sections }}
                 <div class="card">
